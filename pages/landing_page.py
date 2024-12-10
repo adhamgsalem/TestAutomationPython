@@ -25,7 +25,7 @@ class LandingPage(BasePage):
         self.error_message = "error"
 
     def logo_displayed(self):
-        self.wait_for_element(By.XPATH, self.logo)
+        self.element_displayed(By.XPATH, self.logo)
 
     def get_error_message(self):
         return self.driver.find_element(self.error_message).text
